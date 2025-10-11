@@ -84,7 +84,7 @@ public class PerformanceReport {
             System.out.println(type + ": " + count + " messages (" + String.format("%.2f", percentage) + "%)");
         });
 
-        // ** NEW SECTION FOR THROUGHPUT OVER TIME **
+        // THROUGHPUT OVER TIME
         calculateAndPrintThroughputOverTime(records);
 
         // --- Final Summary ---
