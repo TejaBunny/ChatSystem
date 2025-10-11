@@ -84,7 +84,7 @@ public class MessageSender implements Runnable {
                 if (messageSucceeded) {
                     metrics.incrementSuccess();
                 } else {
-                    metrics.incrementFailure(); // Mark as failed only after all 6 attempts fail
+                    metrics.incrementFailure(); // Mark as failed only after all 6 attempts (5 retries) fail
                 }
             }
         } catch (Exception e) {
