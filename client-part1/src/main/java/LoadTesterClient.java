@@ -7,8 +7,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.Random;
 
 public class LoadTesterClient {
-    
-    private static final String SERVER_URL_BASE = "ws://54.200.209.44:8080/chat/";
+    // Important: Insert the EC2 instance public ip address below
+    private static final String SERVER_URL_BASE = "ws://<EC2_PUBLIC_IP>:8080/chat/";
     private static final int WARMUP_THREADS = 32;
     private static final int MESSAGES_PER_THREAD_WARMUP = 1000;
 
