@@ -15,3 +15,8 @@
 
 * Run the LoadTesterClient Java file to see the part-2 results output.
 * After running this file, a CSV file will be automatically created in the directory, named "performance_results.csv", with all the required statistical measures for each sent message.
+
+## Points to be noted when connecting with server-v2 (modified server for assignment-2)
+
+* When running clients for server-v2, and if there is a load balancer as well, then we need to add the Load balancer DNS with port 80, in place of the EC2 server public IP.
+* In the ConnectionManager class in server-v2, we need to add the Rabbit server private IP address to the "RABBITMQ_HOST".
