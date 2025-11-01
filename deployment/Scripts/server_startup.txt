@@ -1,0 +1,20 @@
+# 1. Connect to the server instance via SSH (example)
+# ssh -i /path/to/key.pem ec2-user@<server-ip>
+
+# 2. Install Java 21 (only needed on a new instance)
+sudo dnf install -y java-21-amazon-corretto-headless
+
+# 3. Upload the application JAR (run from local machine)
+# scp -i /path/to/key.pem target/server-v2-1.0-SNAPSHOT.jar ec2-user@<server-ip>:~/
+
+# 4. Stop any old running Java processes
+killall java
+
+# 5. (Optional) Clear the old log file for a clean start
+rm nohup.out
+
+# 6. Run the server application in the background
+nohup java -jar server-v2-1.0-SNAPSHOT.jar &
+
+# 7. Check the log to verify successful startup
+# cat nohup.out
