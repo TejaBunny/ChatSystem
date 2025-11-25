@@ -1,0 +1,9 @@
+ConsumerApp.class
+AnalyticsServer.class
+DatabaseWriter.class
+MongoDBManager.class
+QueueReader.class
+ConsumerConfig.class
+MessageTask.class
+AnalyticsServer$StatsHandler.class
+MessageDTO.class
